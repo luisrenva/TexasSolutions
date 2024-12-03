@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.springframework.boot' version '3.3.5'
+    id 'io.spring.dependency-management' version '1.1.6'
+    //id 'application' // Apply the application plugin
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '20'
+
+//application {
+  //  mainClass = 'com.example.americanairlines.AmericanAirlinesApplication' // Replace with your actual main class
+//}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(20)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+//    implementation 'org.springframework.security:spring-security-oauth2-client'
+//    implementation 'org.springframework.security:spring-security-oauth2-jose'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    implementation 'org.hibernate:hibernate-core:5.6.15.Final' // Or your preferred version
+    implementation 'com.mysql:mysql-connector-j:8.0.33' // For MySQL
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    compileOnly group: 'org.projectlombok', name: 'lombok', version: '0.11.0'
+//    annotationProcessor 'org.projectlombok:lombok:CheckLatestVersion'
+
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    implementation 'org.slf4j:slf4j-api:2.0.7' // Replace with your desired version
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+
+//    implementation 'org.springframework.boot:spring-boot-starter-logging'
+
+
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
