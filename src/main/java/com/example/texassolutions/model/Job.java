@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Job {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int jobId;
 
     @NotBlank(message = "Title is mandatory")

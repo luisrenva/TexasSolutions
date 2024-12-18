@@ -9,7 +9,7 @@ import java.time.LocalTime;
 public class Application {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int applicationId;
 
     @ManyToOne
