@@ -28,7 +28,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
 //    implementation 'org.springframework.security:spring-security-oauth2-client'
-//    implementation 'org.springframework.security:spring-security-oauth2-jose'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 //    implementation 'org.hibernate:hibernate-core:5.6.15.Final' // Or your preferred version
     implementation 'com.mysql:mysql-connector-j:8.0.33' // For MySQL

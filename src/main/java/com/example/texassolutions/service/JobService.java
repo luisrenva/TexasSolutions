@@ -58,5 +58,13 @@ public class JobService {
         return jobResponse;
     }
 
+    public Job updateJob(int id, Job job) {
+        Optional<Job> existingJob = jobRepository.findByJobId(id);
+        if (existingJob.isPresent()) {
+            return jobRepository.save(job);
+        } else {
+            throw new NotFoundException();
+        }
+    }
 
 }
