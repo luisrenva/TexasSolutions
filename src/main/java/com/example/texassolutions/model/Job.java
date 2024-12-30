@@ -35,6 +35,10 @@ public class Job {
 
     private LocalDate updatedDate;
 
+    // Adding optimistic locking logic
+    @Version
+    private Long version;
+
 
     public Company getCompanyId() {
         return companyId;
@@ -100,6 +104,14 @@ public class Job {
 
     public void setUpdatedDate(LocalDate updatedDate) {
         this.updatedDate = updatedDate;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
     }
 
 
