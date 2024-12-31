@@ -32,6 +32,7 @@ dependencies {
 //    implementation 'org.hibernate:hibernate-core:5.6.15.Final' // Or your preferred version
     implementation 'com.mysql:mysql-connector-j:8.0.33' // For MySQL
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    implementation 'org.springframework.kafka:spring-kafka'
 //    compileOnly group: 'org.projectlombok', name: 'lombok', version: '0.11.0'
 //    annotationProcessor 'org.projectlombok:lombok:CheckLatestVersion'
 
@@ -50,6 +51,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//    testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
 tasks.named('test') {
