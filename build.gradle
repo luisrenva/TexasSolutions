@@ -41,6 +41,7 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-api:2.0.7' // Replace with your desired version
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 
 
 //    implementation 'org.springframework.boot:spring-boot-starter-logging'
