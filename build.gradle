@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '20'
+sourceCompatibility = '23'
 
 //application {
   //  mainClass = 'com.example.americanairlines.AmericanAirlinesApplication' // Replace with your actual main class
@@ -16,7 +16,7 @@ sourceCompatibility = '20'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(20)
+        languageVersion = JavaLanguageVersion.of(23)
     }
 }
 
