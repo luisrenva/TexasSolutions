@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+## mac files
+.DS_Store
+src/.DS_Store

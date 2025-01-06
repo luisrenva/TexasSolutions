@@ -33,8 +33,7 @@ public class JobController {
         Optional<Job> jobResponse = jobService.getJobById(id);
         if ( jobResponse.isPresent()) {
             return new ResponseEntity<>(jobResponse, HttpStatus.OK);
-        }
-        else {
+        } else {
             throw new NotFoundException();
         }
     }
