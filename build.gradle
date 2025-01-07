@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '20'
+sourceCompatibility = '23'
 
 //application {
   //  mainClass = 'com.example.americanairlines.AmericanAirlinesApplication' // Replace with your actual main class
@@ -16,7 +16,7 @@ sourceCompatibility = '20'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(20)
+        languageVersion = JavaLanguageVersion.of(23)
     }
 }
 
@@ -28,11 +28,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
 //    implementation 'org.springframework.security:spring-security-oauth2-client'
-//    implementation 'org.springframework.security:spring-security-oauth2-jose'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 //    implementation 'org.hibernate:hibernate-core:5.6.15.Final' // Or your preferred version
     implementation 'com.mysql:mysql-connector-j:8.0.33' // For MySQL
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    implementation 'org.springframework.kafka:spring-kafka'
 //    compileOnly group: 'org.projectlombok', name: 'lombok', version: '0.11.0'
 //    annotationProcessor 'org.projectlombok:lombok:CheckLatestVersion'
 
@@ -41,6 +41,7 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-api:2.0.7' // Replace with your desired version
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 
 
 //    implementation 'org.springframework.boot:spring-boot-starter-logging'
@@ -51,6 +52,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//    testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
 tasks.named('test') {

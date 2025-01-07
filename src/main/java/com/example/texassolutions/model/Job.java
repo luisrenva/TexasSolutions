@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.time.LocalDate;
 
@@ -11,7 +13,7 @@ import java.time.LocalDate;
 public class Job {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int jobId;
 
     @NotBlank(message = "Title is mandatory")
@@ -34,6 +36,10 @@ public class Job {
     private LocalDate createdDate;
 
     private LocalDate updatedDate;
+
+    // Adding optimistic locking logic
+    @Version
+    private Long version;
 
 
     public Company getCompanyId() {
@@ -102,5 +108,17 @@ public class Job {
         this.updatedDate = updatedDate;
     }
 
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
+    }
+
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+    }
 
 }
