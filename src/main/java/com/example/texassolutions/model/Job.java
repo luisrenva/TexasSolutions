@@ -19,6 +19,7 @@ public class Job {
     @NotBlank(message = "Title is mandatory")
     private String title;
 
+    @Lob
     @NotBlank(message = "Description is mandatory")
     private String description;
 
@@ -36,6 +37,8 @@ public class Job {
     private LocalDate createdDate;
 
     private LocalDate updatedDate;
+
+    private String status;
 
     // Adding optimistic locking logic
     @Version
@@ -114,6 +117,14 @@ public class Job {
 
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override

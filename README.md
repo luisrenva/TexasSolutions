@@ -21,9 +21,12 @@ We need to set vm parameters to be able to run the app that was build in Gradle
 
 * ./gradle build
 * ./gradle bootRun
-* or throuugh IDE -Dspring.profiles.active=local
+* or through IDE -Dspring.profiles.active=local
 * ####
   ```` shell 
   SPRING_PROFILES_ACTIVE="local" ./gradlew bootRun
+
+* run mysql locally: brew services start mysql
+* Create home schema
 
 TODO: Rename db and add new sql

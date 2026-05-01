@@ -33,7 +33,7 @@ public class JobController {
 //    }
 
     // other example of post
-    //public REsponseEntity<DTO> authorizePayment(user, dto)  {
+    //public ResponseEntity<DTO> authorizePayment(user, dto)  {
 //      call the service  service.authPayment() the service will throw the exception
 //    return Response.ok(response);
     //}
@@ -50,6 +50,7 @@ public class JobController {
     @GetMapping(API_ENDPOINT + "jobs/{id}")
     public ResponseEntity<Optional<Job>> getJobById(@PathVariable int id) {
         log.debug("Getting job by id {}", id);
+        //TODO: Move throw error logic to service layer
         Optional<Job> jobResponse = jobService.getJobById(id);
         if (jobResponse.isPresent()) {
             return new ResponseEntity<>(jobResponse, HttpStatus.OK);

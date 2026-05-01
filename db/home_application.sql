@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `application`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `application` (
-  `application_id` int NOT NULL AUTO_INCREMENT,
+  `application_id` BIGINT NOT NULL AUTO_INCREMENT,
   `job_id` int NOT NULL,
   `candidate_id` int NOT NULL,
   `created_date` time(6) DEFAULT NULL,
@@ -59,3 +59,7 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2024-12-22 21:57:15
+
+INSERT INTO home.application
+(created_by, created_date, updated_by, updated_date, candidate_id, job_id)
+VALUES('Luis Renteria', '2026-04-30', 'Luis', '2026-04-30', 1, 54);
