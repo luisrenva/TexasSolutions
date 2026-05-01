@@ -25,8 +25,8 @@ public class Users {
     private LocalDate createdDate;
 
     @NotNull(message = "Application cannot be null")
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "application_id")
     @JsonProperty("application")
-    private int applicationId;
+    private Application applicationId;
 }
