@@ -39,3 +39,8 @@ out/
 ## mac files
 .DS_Store
 src/.DS_Store
+
+## local changes
+.env
+
+.github

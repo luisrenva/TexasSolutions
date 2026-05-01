@@ -5,6 +5,7 @@ import com.example.texassolutions.model.IdempotencyKey;
 import com.example.texassolutions.model.Job;
 import com.example.texassolutions.repository.IdempotencyKeyRepository;
 import com.example.texassolutions.repository.JobRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,15 +14,13 @@ import java.util.List;
 import java.util.Optional;
 import java.time.LocalDateTime;
 
+@RequiredArgsConstructor
 @Slf4j
 @Service
 public class JobService {
 
-    @Autowired
-    private JobRepository jobRepository;
-
-    @Autowired
-    private IdempotencyKeyRepository idempotencyKeyRepository;
+    private final JobRepository jobRepository;
+    private final IdempotencyKeyRepository idempotencyKeyRepository;
 
     public List<Job> getJobs() {
         return jobRepository.findAll();
